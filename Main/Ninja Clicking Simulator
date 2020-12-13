@@ -1,0 +1,15 @@
+local Library = loadstring(game:HttpGet(('https://pastebin.com/raw/FsJak6AT')))()
+local Window = Library:CreateWindow("Ninja Sim GUI")
+local MainAttachment = Window:CreateFolder("Main")
+
+MainAttachment:Button("Auto Farm", function()
+while wait() do
+   game.Workspace.Debris.Events.Click:FireServer();
+end
+end)
+
+MainAttachment:Button("Auto Rebirth", function()
+while wait() do
+   game.Workspace.Debris.Events.MakeRebirth:FireServer(50); -- You can change the value to whatever your max rebirth value is
+end
+end)
